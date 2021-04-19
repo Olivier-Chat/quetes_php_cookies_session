@@ -1,4 +1,22 @@
-<?php require 'inc/head.php'; ?>
+<?php require 'inc/head.php';
+session_start();
+if(isset($_SESSION['userName'])){
+    header('Location: index.php');
+}
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $loginname = htmlspecialchars($_POST['loginname']);
+    $loginname = trim($loginname);
+    $loginname = stripcslashes($loginname);
+    $_SESSION['userName'] = $loginname;
+    header('Location: index.php');
+
+}
+
+
+
+
+?>
+
 <div class="container" style="margin-top:40px">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">

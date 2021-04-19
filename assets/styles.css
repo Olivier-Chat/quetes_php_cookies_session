@@ -31,6 +31,7 @@ strong {
     margin-top:1em;
 }
 
+
 section.cookies{
   min-height: 90vH;
 }
@@ -52,6 +53,9 @@ section.cookies{
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
+}
+.table-image td, th {
+    vertical-align: middle;
 }
 
 @media screen and ( min-width:768px ){
